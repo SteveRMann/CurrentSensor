@@ -1,24 +1,27 @@
 // ================================== setup() ==================================
 void setup()
 {
-  Serial.begin(115200);
 
-  Serial.println();
-  Serial.println();
-  Serial.println(F(SketchName));
-  Serial.println(F(sketchVersion));
-  Serial.println();
+  /*  Serial.begin(115200);
+    Serial.println();
+    Serial.println();
+    Serial.println(F(SketchName));
+    Serial.println(F(sketchVersion));
+    Serial.println();
+  */
+
+  // digitalWrite(ledPin, ledON);
 
   setup_wifi();
-
-
-  // Call the PubSubClent setServer method, passing as first argument the
-  // address and as second the port.
   client.setServer(mqttServer, mqttPort);
   mqttConnect();
 
-  // Tell the game operator what was dialed.  (Both formats work).
-  //client.publish(numberDialedTopic, (char*)dialedDigits);
-  client.publish(statusTopic, "open");
+  client.publish(statusTopic, "true");
   delay(5);
+
+  // digitalWrite(ledPin, ledOFF);
+  // delay(100);
+
+  //Now, sleep, waiting for RST
+  ESP.deepSleep( 0, WAKE_RF_DEFAULT );
 }

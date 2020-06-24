@@ -22,7 +22,9 @@ char hostName[12];              // Holds hostNamePrefix + the last three bytes o
 IPAddress myIP;                 // Holds the IP address
 int rssi;
 
-
+#define ledPin 2
+#define ledON HIGH
+#define ledOFF LOW
 
 // ****************************** Globals  ******************************
 
