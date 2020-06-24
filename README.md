@@ -1,4 +1,4 @@
 # Entry_Sensor
-ESP-Dash is code to simply log on to WiFi, publish an MQTT message, then go to sleep forever.
+This is a 4-button DASH remote where each button publishes an MQTT message
 
  
