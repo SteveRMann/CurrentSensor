@@ -4,7 +4,8 @@
 *.psd
 *.bak
 *.sfk
-*.b###
+*.b#?
+*.s#?
 *.zip
 *.sch
 *.lnk
