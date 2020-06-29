@@ -14,7 +14,7 @@ void setup() {
   pinMode(3, FUNCTION_3);   //Use Rx as GPIO
 
   pinMode(BUTTON_ONE_PIN, INPUT_PULLUP);
-  pinMode(BUTTON_TWO_PIN, INPUT);                 //LED is pulling this pin up.
+  pinMode(BUTTON_TWO_PIN, INPUT_PULLUP);  
   pinMode(BUTTON_THREE_PIN, INPUT_PULLUP);
   pinMode(BUTTON_FOUR_PIN, INPUT_PULLUP);
 
@@ -43,8 +43,8 @@ void setup() {
   client.publish(statusTopic, "ready");
   delay(5);
 
-  blinkLed();
-  blinkLed();
-  blinkLed();
+  //blinkLed();
+  //blinkLed();
+  //blinkLed();
 
 }
