@@ -1,12 +1,12 @@
 //========== Setup ==========
 void setup() {
-    Serial.begin(115200);
-    Serial.println(F("\n"));
-    delay(10);
-    Serial.println(F(sketchName));
-    Serial.print(F("Version "));
-    Serial.println(F(sketchVersion));
-    Serial.println();
+  Serial.begin(115200);
+  Serial.println(F("\n"));
+  delay(10);
+  Serial.println(F(sketchName));
+  Serial.print(F("Version "));
+  Serial.println(F(sketchVersion));
+  Serial.println();
 
 
   //********** CHANGE PIN FUNCTION  TO GPIO **********
@@ -14,7 +14,7 @@ void setup() {
   pinMode(3, FUNCTION_3);   //Use Rx as GPIO
 
   pinMode(BUTTON_ONE_PIN, INPUT_PULLUP);
-  pinMode(BUTTON_TWO_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_TWO_PIN, INPUT);                 //LED is pulling this pin up.
   pinMode(BUTTON_THREE_PIN, INPUT_PULLUP);
   pinMode(BUTTON_FOUR_PIN, INPUT_PULLUP);
 
@@ -42,5 +42,9 @@ void setup() {
 
   client.publish(statusTopic, "ready");
   delay(5);
+
+  blinkLed();
+  blinkLed();
+  blinkLed();
 
 }

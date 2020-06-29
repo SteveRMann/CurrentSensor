@@ -1,5 +1,5 @@
 #define sketchName "dash.ino"
-#define sketchVersion "Version 1.0 (6/22/2020)"
+#define sketchVersion "Version 1.1 (6/29/2020)"
 #define hostPrefix "DASH4-"     // 6-chars MAX. Used by setup_wifi()
 
 
@@ -23,6 +23,9 @@
 #define BUTTON_TWO_PIN 2
 #define BUTTON_THREE_PIN 1  // Tx
 #define BUTTON_FOUR_PIN 3  // Rx
+
+#define LED_ON LOW
+#define LED_OFF HIGH
 
 // Define instances of EasyButton
 EasyButton button1(BUTTON_ONE_PIN);
