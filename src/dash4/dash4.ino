@@ -24,8 +24,6 @@
 #define BUTTON_THREE_PIN 1  // Tx
 #define BUTTON_FOUR_PIN 3  // Rx
 
-#define LED_ON LOW
-#define LED_OFF HIGH
 
 // Define instances of EasyButton
 EasyButton button1(BUTTON_ONE_PIN);
