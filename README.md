@@ -12,7 +12,23 @@ There is a sense wire on the PCB. This sense wire is to be placed around or adja
 of the power cable to the device.  When properly placed, the LED on the board will turn on or off as the
 power to the device is turned on or off.
 
+
+#### **`Acknowledgements`**
+This project was inspired by a You Tube video by Ralph Bacon:
+'No contact mains detector for Arduino & Pi'.
+https://www.youtube.com/watch?v=cDuObAR42Nw
+
+I simply put his circuit on a PCB, added an ESP8266-01 and the Arduino code.
+
+
+
 ##**The remainder is for appearance experiments only**
+
+CA3046
+TPQ3904
+
+
+
 
 ```Arduino
 #include <EEPROM.h>
